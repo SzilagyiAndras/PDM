@@ -19,6 +19,9 @@
 	//verificam daca workerul exista deja,dacu nu cream worker-ul
 	 if(typeof(w)=="undefined"){
 	  w=new Worker("numere_perfecte.js");
+	w.addEventListener('message', function(e) {
+  console.log('Worker said: ', e.data);
+}, false);
 	  }
 	w.onmmesage=function(event){
 		document.getElementById("rezultat").innerHtml=event.data;
