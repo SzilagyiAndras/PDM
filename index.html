@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+			<title>Afisarea numerelor perfecte</title>
+		</head>
+
+<body>
+  <p>Gasirea numerelor perfecte:<output id="rezultat"></output></p>
+  <button onclick="incepeWorker()">Start Worker</button>
+  <button onclick="stopWorker">Stop Worker</button>
+  
+  <script>
+   var w;
+	function incepeWorker(){
+		
+	if(typeof(Worker)!=="undefined"){
+	//verificam daca workerul exista deja,dacu nu cream worker-ul
+	 if(typeof(w)=="undefined"){
+	  w=new Worker("numere_perfecte.js");
+	  }
+	w.onmmesage=function(e){
+		document.getElementById("rezultat").innerHtml=e.data;
+		};
+	}
+	else{
+		document.getElementById("rezultat").innerHtml="Web Worker nu este suportat in acest browser";
+		}
+}
+
+  function stopWorker(){
+	w.terminate();
+	w=undefined;
+	}
+</script>
+</body>
+</html>
+	  
+  </script>
+</body>
