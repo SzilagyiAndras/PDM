@@ -20,8 +20,8 @@
 	 if(typeof(w)=="undefined"){
 	  w=new Worker("numere_perfecte.js");
 	  }
-	w.onmmesage=function(e){
-		document.getElementById("rezultat").innerHtml=e.data;
+	w.onmmesage=function(eveent){
+		document.getElementById("rezultat").innerHtml=event.data;
 		};
 	}
 	else{
