@@ -20,7 +20,7 @@
 	 if(typeof(w)=="undefined"){
 	  w=new Worker("numere_perfecte.js");
 	  }
-	w.onmmesage=function(eveent){
+	w.onmmesage=function(event){
 		document.getElementById("rezultat").innerHtml=event.data;
 		};
 	}
