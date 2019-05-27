@@ -15,5 +15,5 @@ var numar=0;
 		 
 	 }
  }//sfarsit functie
- 
+ numerePerfecte();
 	
