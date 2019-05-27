@@ -22,8 +22,8 @@
 	
 	  }
 	w.onmessage=function(event){
-		document.getElementById("rezultat").innerHtml=event.data;
-		console.log(rezultat);
+		var rezultat=document.getElementById("rezultat");
+		console.log(event.data);
 		};
 	}
 	else{
