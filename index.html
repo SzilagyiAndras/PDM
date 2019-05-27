@@ -21,7 +21,7 @@
 	  w=new Worker("numere_perfecte.js");
 	
 	  }
-	w.onmmesage=function(event){
+	w.onmessage=function(event){
 		document.getElementById("rezultat").innerHtml=event.data;
 		console.log("rezultat");
 		};
