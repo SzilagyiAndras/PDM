@@ -8,7 +8,7 @@ var numar=0;
 			 if(numar %i==0){
 				 sumadivizori+=i;
 			 }
-		 }
+		 }//sfarsti for
 		 if(sumadivizori==numar){
 			 postMessage(numar);
 		 }
